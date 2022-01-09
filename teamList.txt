@@ -1,5 +1,3 @@
-# Team names for auto shoutouts i.e., CNT Club is: cntclub
-# Taken from the team URL https://www.twitch.tv/team/cntclub
+# Team names for auto shoutouts i.e., Wee Squad is: weesquad
+# Taken from the team URL https://www.twitch.tv/team/weesquad
 # Add each team on a new line
-cntclub
-weesquad

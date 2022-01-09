@@ -20,97 +20,72 @@
 </head>
 
 <body>
-    <h1>Animated Shoutouts by <a href="https://twitch.tv/thoseeyes" target="_blank">thoseEyes</a></h1>
+    <h1>Automatic Shoutouts by <a href="https://twitch.tv/thoseeyes" target="_blank">thoseEyes</a> modified by <a href="https://twitch.tv/nxmee" target="_blank">nxmee</a></h1>
 
     <h2>Setup Guide</h2>
 
-    <p>As these shoutouts show profile pictures, we need to authorise with Twitch's servers.</p>
-    <p>The following steps will show you how to generate a 'token' to allow access. </p>
-    <p><b>You will need to regenerate this every 60 days (for now)</b></p>
-    <p>To use Animated Shoutouts, please add 'shoutouts.htm' as a local browser sourse in OBS.</p>
+    <p>To use Animated Shoutouts, please add 'shoutouts.htm' as a local browser source in OBS.</p>
 
     <ul>
-        <li><a href="#tokens">1. Basic Setup</a></li>
-        <li><a href="#autoShoutouts">2. (NEW) Auto Shoutouts and Team Shoutouts</a></li>
-        <li><a href="#obs">3. OBS Setup</a></li>
-        <li><a href="#customisation">4. Customisation</a></li>
+        <li><a href="#autoShoutouts">1. Auto Shoutouts and Team Shoutouts</a></li>
+        <li><a href="#obs">2. OBS Setup</a></li>
+        <li><a href="#customisation">3. Customisation</a></li>
     </ul>
 
-    <a id="tokens">
-        <h2>1. Basic Setup</h2>
+
+    <a id="autoShoutouts">
+        <h2>1. Auto Shoutouts and Team Shoutouts</h2>
     </a>
 
-    <p>1.1 Click <a
-            href="https://id.twitch.tv/oauth2/authorize?response_type=token&client_id=9l8ufsalz4hqlzzl1g0mr7e38uxx1m&redirect_uri=http://localhost&scope=user_read"
-            target="_blank">here</a> and login to Twitch</p>
+    <p>The system will automatically shoutout chosen channels and members of teams as they enter chat! This can be setup for a custom list of users/channels,
+        alongside any number of stream teams.</p>
 
-    <p>1.2 Once logged in, you'll be directed to an error page, BUT FEAR NOT. Copy the value highlighted in the address
-        bar (between the = and the &amp;), as pictured below:</p>
+    <p>This requires a chat password to be generated so messages can be sent to your chat.</p>
 
-    <img src="images/addressbar.png" />
-
-    <p>1.3 Open 'config.js' in Notepad and paste in the value as highlighted in the image below:</p>
-
-    <img src="images/token.png" />
-
-    <p>1.4 Put your channel name (mine would be 'thoseEyes') in place of the text as highlighted below:</p>
+    <p>1.1 Put your channel name (mine would be 'nxmee') in place of the text as highlighted below:</p>
 
     <img src="images/channelName.png" />
 
-    <p>1.5 Save the file.</p>
+    <p>1.2 Click <a href="https://twitchapps.com/tmi/" target="_blank">here</a> and then click Connect.</p>
 
-    <a id="autoShoutouts">
-        <h2>2. (NEW) Auto Shoutouts and Team Shoutouts</h2>
-    </a>
-
-    <p>The system can now automatically shoutout chosen channels and members of teams as they enter chat! The shoutout
-        animation is triggered alongside a message in chat. This can be setup for a custom list of users/channels,
-        alongside any number of stream teams.</p>
-
-    <p>This requires an additional chat password to be generated so messages can be sent to your chat.</p>
-
-    <p><b>NOTE: You should disable the !so command in StreamLabs and StreamElements when using this feature.</b></p>
-
-    <p>2.1 Click <a href="https://twitchapps.com/tmi/" target="_blank">here</a> and then click Connect.</p>
-
-    <p>2.2 After logging in, please copy the generated password as shown below:</p>
+    <p>1.3 After logging in, please copy the generated password as shown below:</p>
 
     <img src="images/chatPassword.png" />
 
-    <p>2.3 Open 'config.js' in Notepad and paste in the value as highlighted in the image below:</p>
+    <p>1.4 Open 'config.js' in Notepad and paste in the value as highlighted in the image below:</p>
 
     <img src="images/chatPasswordConfig.png" />
 
-    <p>2.4 Save the file.</p>
+    <p>1.5 Save the file.</p>
 
-    <p>2.5 Open 'autoShoutoutList.txt'. Add each channel that you want to shoutout on a new line like so, then save the file.</p>
+    <p>1.6 Open 'autoShoutoutList.txt'. Add each channel that you want to shoutout on a new line like so, then save the file.</p>
 
     <img src="images/autoConfig.png" />
 
-    <p>2.6 Open 'teamList.txt'. Add each team that you want to shoutout on a new line like so, then save the file. The system will fetch all members of each team for you!</p>
+    <p>1.7 Open 'teamList.txt'. Add each team that you want to shoutout on a new line like so, then save the file. The system will fetch all members of each team for you!</p>
 
     <img src="images/teamConfig.png" />
 
-    <p>2.7 The 'teamOptOutList.txt' can be used to opt out any users from team auto shoutouts, if they would prefer :)</p>
+    <p>1.8 The 'teamOptOutList.txt' can be used to opt out any users from team auto shoutouts, if they would prefer :)</p>
 
-    <p>2.8 Chat messages are customisable. There are different formats for channel shoutouts and team shoutouts as shown below. Each have variables (e.g., {user}) that can be used, these are detailed in the file.</p>
+    <p>1.9 Chat messages are customisable. There are different formats for channel shoutouts and team shoutouts as shown below. Each have variables (e.g., {user}) that can be used, these are detailed in the file.</p>
 
     <img src="images/customiseMessage.png" />
 
     <a id="obs">
-        <h2>3. OBS Setup</h2>
+        <h2>2. OBS Setup</h2>
     </a>
 
-    <p>3.1 In OBS, create a new Browser Source.</p>
+    <p>2.1 In OBS, create a new Browser Source.</p>
 
-    <p>3.2 Tick 'Local file' and 'Width' to 1920 and 'Height' to 350. Leave the two checkboxes unchecked.</p>
+    <p>2.2 Tick 'Local file' and 'Width' to 1920 and 'Height' to 350. Leave the two checkboxes unchecked.</p>
 
     <img src="images/obs.png" />
 
-    <p>3.3 Click OK and you're done in OBS.</p>
+    <p>2.3 Click OK and you're done in OBS.</p>
 
     <a id="customisation">
-        <h2>4. Customisation</h2>
+        <h2>3. Customisation</h2>
     </a>
 
     <p>Open up <b>config.js</b> and inside you can change the following variables:</p>
@@ -123,16 +98,6 @@
             <b>teamShoutoutChatMessage</b> - template for the team shoutout message sent to chat, variables: {user} {link}
             {team} {teamlink}
         </li>
-        <li><b>pauseDuration</b> - the length of time the shoutout will pause in the centre of the screen (in milliseconds)
-        </li>
-        <li><b>rollInOutDuration</b> - time taken for the image and text to roll in to the centre of the screen (in
-            milliseconds)</li>
-        <li><b>userBackgroundColour</b> - background color of the label</li>
-        <li>
-            <b>userTextColour</b> - text color of the label</li>
-        <li>
-            <b>animationEasing</b> - easing used by anime.js, full list <a
-                href="https://animejs.com/documentation/#linearEasing">here</a></li>
     </ul>
 </body>
 

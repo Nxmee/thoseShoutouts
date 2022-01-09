@@ -1,4 +1,2 @@
 # Channel names for auto shoutouts
 # Add each name on a new line
-ayupryan
-yuecake
