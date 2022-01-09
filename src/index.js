@@ -7,8 +7,6 @@ let teamAutoList = false
 
 async function init() {
 
-    setColours()
-
     shoutouts = new Shoutouts({})
 
     spokenUsers = new SpokenUsers()
