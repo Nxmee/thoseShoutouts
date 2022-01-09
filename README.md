@@ -3,7 +3,7 @@ Streamers can now be shouted out automatically as they enter chat by adding them
 
 To get started, download the the code and double-click `starthere.htm` for full instructions on how to set this up.
 
-### [Download Here](https://github.com/Nxmee/thoseShoutouts/releases/download/v1.0.0/thoseShoutouts.zip)
+### [Download Here](https://github.com/Nxmee/thoseShoutouts/releases/download/v1.0.1/thoseShoutouts.zip)
 
 ## Updates
 - FEATURE ([PR#8](https://github.com/thoseEyes/thoseShoutouts/pull/8)): Auto Shoutout and Team Shoutout Support! Check `starthere.htm` to set this up! Requested by [HollisTheSatisfactory](https://twitch.tv/HollisTheSatisfactory)
